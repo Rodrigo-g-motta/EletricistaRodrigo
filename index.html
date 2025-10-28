@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eletricista 24h em Caxias do Sul | Rodrigo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #a0a0a0, #ff6600);
+    color: #000;
+    padding: 0.4rem 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  header img {
+    width: 340px;
+    height: 243px;
+    border-radius: 8px;
+    margin-right: 2px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .header-text {
+    flex: 1;
+  }
+
+  header h1 {
+    font-size: 3.2rem;
+    margin: 0 0 0.1rem 0;
+  }
+
+  header p {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  .dual-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .container2, .container3 {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+.btn-ligar {
+    max-width: 300px;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #007bff;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 1rem auto;
+    transition: background 0.3s ease;
+    gap: 10px;
+  }
+
+  .btn-whatsapp {
+    max-width: 300px;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 1rem auto;
+    transition: background 0.3s ease;
+    gap: 10px;
+  }
+
+  .btn-whatsapp:hover { background: #1ebe5d; }
+  .btn-whatsapp img { width: 26px; height: 26px; }
+
+  h2 { color: #222; border-left: 5px solid #ff6600; padding-left: 10px; }
+  ul { list-style: none; padding-left: 0; }
+  ul li::before { content: '⚡ '; }
+
+  footer { text-align: center; font-size: 0.9rem; padding: 1.5rem; color: #555; }
+
+  /* Galeria */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 1.5rem 0;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .gallery img:hover { transform: scale(1.05); }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+  }
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+  .lightbox button {
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.5);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, background 0.3s, border-color 0.2s;
+    z-index: 3;
+  }
+  .close-btn {
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    right: 10px;
+    line-height: 60px;
+    z-index: 4;
+  }
+  .prev, .next {
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .prev { left: 25%; top: 50%; }
+  .next { right: 25%; top: 50%; }
+
+  .prev:hover, .next:hover, .close-btn:hover {
+    transform: scale(1.2);
+    background: rgba(0,0,0,0.5);
+    border-color: rgba(255,255,255,0.8);
+  }
+
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  /* Botões flutuantes */
+  .floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+  }
+  .floating-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+  }
+  .floating-buttons a:hover { transform: scale(1.1); }
+  .whatsapp-float {
+    background-color: #25d366;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .call-float { background-color: #007bff; }
+
+  /* Responsivo */
+  @media (max-width: 1024px) {
+    header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem; text-align: center; }
+    header img { margin: 0 0 10px 0; width: 200px; height: 200px; }
+    header h1 { font-size: 1.44rem; }
+    header p { font-size: 0.864rem; }
+    .dual-section { flex-direction: column; }
+  }
+
+  @media (max-width: 768px) {
+    .container { margin: 1rem; padding: 1rem; }
+    .btn-whatsapp { font-size: 1rem; padding: 12px 18px; }
+    .lightbox img { max-width: 95%; max-height: 70%; }
+    .prev, .next, .close-btn { width: 50px; height: 50px; font-size: 2rem; line-height: 50px; }
+    .prev { left: 25%; top: 50%; }
+    .next { right: 25%; top: 50%; }
+    .close-btn { top: 10px; right: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://lh3.googleusercontent.com/p/AF1QipOKnL2fKcvEOHY4alZDu5gSL5v-Lesp1xMgwbJX=s1360-w1360-h1020" alt="Eletricista">
+  <div class="header-text">
+    <h1>Eletricista 24h em Caxias do Sul </h1>
+    <p>Residencial e Industrial - Atendimento emergencial rápido e seguro.</p>
+  </div>
+</header>
+
+<div class="container">
+	<div class="dual-section">
+		<a href="tel:+5554991878144" class="btn-ligar">📞Ligar agora.</a>
+		<a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda+agora." class="btn-whatsapp">
+		  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chame no WhatsApp.
+		</a>	
+	</div>
+</div>
+
+<div class="container">
+  <div class="dual-section">
+    <div class="container2">
+      <h2>Serviços Emergenciais e novas istalações</h2>
+      <ul>
+        <li>Falta de energia em parte da casa.</li>
+        <li>Disjuntor desarmando ou queimado.</li>
+        <li>Tomadas com cheiro de queimado.</li>
+        <li>Curto-circuito e quedas de luz.</li>
+        <li>Quadro de energia com mau contato.</li>
+      </ul>
+    </div> 
+
+    <div class="container2">
+      <h2>Características do Profissional</h2>
+      <ul>
+        <li>Profissional devidamente qualificado.</li>
+        <li>Mais de 10 anos de experiência.</li>
+        <li>Atendimento em toda Caxias e região.</li>
+        <li>Pagamento via Pix ou Dinheiro.</li>
+        <li>Serviço garantido e seguro.</li>
+      </ul>
+    </div>
+  </div>
+</div>  
+
+<div class="container">
+  <h2>Fotos de Serviços Realizados</h2>
+  <div class="gallery">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipOfT1JCQiOsr96-YWvEaEYc9YB4k-oT-tNWJZmd=s1360-w1360-h1020" alt="Serviço 1" onclick="openLightbox(0)">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipPyGnIUI8LCvDGWWj2pslfDDoSfJiJn6XSKpuAM=s1360-w1360-h1020" alt="Serviço 2" onclick="openLightbox(1)">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipM9U6K_-FveSvGfXcOHOeIQku-6QwCcxT5vvQD7=s1360-w1360-h1020" alt="Serviço 3" onclick="openLightbox(2)">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipM8i45_Yvm1BU_1MOrhu4ZFv3H9oSjHTkfxkU4u=s1360-w1360-h1020" alt="Serviço 4" onclick="openLightbox(3)">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipPtdEM7vjjOcRDAUOqFunpru-erameFSVS5VZ-F=s1360-w1360-h1020" alt="Serviço 5" onclick="openLightbox(4)">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipOdLK04pnL2qhoT_EHWgQ0O2EMq62mOEAq6gUzR=s1360-w1360-h1020" alt="Serviço 6" onclick="openLightbox(5)">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipMmY1wymwo1R2Bu0ApbwN6XPpbfEfIhM-02eCdZ=s1360-w1360-h1020" alt="Serviço 7" onclick="openLightbox(6)">
+  </div>
+</div>
+<div class="container">
+	<div class="dual-section">
+		<a href="tel:+5554991878144" class="btn-ligar">📞Ligar agora.</a>
+		<a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda+agora." class="btn-whatsapp">
+		  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Falar com o eletricista agora
+		</a>	
+	</div>
+</div>
+
+<div class="container">
+  <h2>Horário e Tempo de Resposta</h2>
+  <p>🚗 Atendimento 24 horas por dia, inclusive fins de semana e feriados.</p>
+  <p>Tempo médio de chegada: até 30 minutos nos principais bairros de Caxias do Sul.</p>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="if(event.target === this) closeLightbox();">
+  <button class="prev" onclick="changeImage(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="Imagem Ampliada">
+  <button class="next" onclick="changeImage(1)">›</button>
+  <button class="close-btn" onclick="closeLightbox()">×</button>
+</div>
+
+<!-- Botões flutuantes -->
+<div class="floating-buttons">
+  <a href="https://wa.me/5554991878144?text=Olá,+preciso+de+um+atendimento+elétrico+urgente." class="whatsapp-float" title="Chamar no WhatsApp"></a>
+  <a href="tel:+5554991878144" class="call-float" title="Ligar agora">📞</a>
+</div>
+
+<footer>
+  © 2025 Eletricista Rodrigo | Atendimento 24h em Caxias do Sul
+</footer>
+
+<script>
+  const images = [
+    "https://lh3.googleusercontent.com/p/AF1QipOfT1JCQiOsr96-YWvEaEYc9YB4k-oT-tNWJZmd=s1360-w1360-h1020",
+    "https://lh3.googleusercontent.com/p/AF1QipPyGnIUI8LCvDGWWj2pslfDDoSfJiJn6XSKpuAM=s1360-w1360-h1020",
+    "https://lh3.googleusercontent.com/p/AF1QipM9U6K_-FveSvGfXcOHOeIQku-6QwCcxT5vvQD7=s1360-w1360-h1020",
+    "https://lh3.googleusercontent.com/p/AF1QipM8i45_Yvm1BU_1MOrhu4ZFv3H9oSjHTkfxkU4u=s1360-w1360-h1020",
+    "https://lh3.googleusercontent.com/p/AF1QipPtdEM7vjjOcRDAUOqFunpru-erameFSVS5VZ-F=s1360-w1360-h1020",
+    "https://lh3.googleusercontent.com/p/AF1QipOdLK04pnL2qhoT_EHWgQ0O2EMq62mOEAq6gUzR=s1360-w1360-h1020",
+    "https://lh3.googleusercontent.com/p/AF1QipMmY1wymwo1R2Bu0ApbwN6XPpbfEfIhM-02eCdZ=s1360-w1360-h1020"
+  ];
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    const img = document.getElementById('lightbox-img');
+    img.style.opacity = 0;
+    document.getElementById('lightbox').style.display = 'flex';
+    setTimeout(() => {
+      img.src = images[currentIndex];
+      img.onload = () => img.style.opacity = 1;
+    }, 100);
+  }
+
+  function closeLightbox() {
+    const box = document.getElementById('lightbox');
+    box.style.display = 'none';
+    document.getElementById('lightbox-img').src = '';
+  }
+
+  function changeImage(direction) {
+    const img = document.getElementById('lightbox-img');
+    img.style.opacity = 0;
+    currentIndex += direction;
+    if(currentIndex < 0) currentIndex = images.length - 1;
+    if(currentIndex >= images.length) currentIndex = 0;
+    setTimeout(() => {
+      img.src = images[currentIndex];
+      img.onload = () => img.style.opacity = 1;
+    }, 200);
+  }
+</script>
+
+</body>
+</html>
