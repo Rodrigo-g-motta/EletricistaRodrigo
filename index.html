@@ -17,35 +17,42 @@
         header {
           display: flex;
           align-items: center;
-          background: linear-gradient(to right, #3a3a3a, #ff6600);
-          color: #000;
+          background: radial-gradient(circle at 13%, #3a3a3a 25%, #eb5e00 100%);
+          color: #ffffff;
           padding: 0.4rem 0.6rem;
           flex-wrap: wrap;
         }
 
         header img {
-          width: 340px;
-          height: 243px;
+          width: 440px;
+          height: 440px;
           border-radius: 8px;
           margin-right: 2px;
-          object-fit: cover;
+          object-fit:contain;
           object-position: center;
         }
 
         .header-text {
           flex: 1;
+          font-weight: bold;
+         -webkit-text-stroke-width: 1px;
+         -webkit-text-stroke-color: rgb(0, 0, 0);/**/
         }
 
         header h1 {
           font-size: 3.2rem;
-          color: #ffffff;
+          color: #ffffff;/**/
           margin: 0 0 0.1rem 0;
+          /*-webkit-text-stroke-width: 50px;
+          -webkit-text-stroke-color: black;*/
         }
 
         header p {
           font-size: 2rem;
-          color: #ffffff;
+          color: #ffffff;/**/
           margin: 0;
+          /*-webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;*/
         }
 
         .container {
@@ -54,7 +61,7 @@
           margin: 2rem auto;
           padding: 1rem;
           border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         .dual-section {
@@ -68,7 +75,7 @@
           flex: 1;
           min-width: 300px;
           padding: 0rem 1rem 0rem;
-          background: #3a3a3a;
+          background: linear-gradient(to right, #3a3a3a 90%, #eb5e00 100%);
           border-radius: 10px;
           box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
@@ -85,7 +92,7 @@
           padding: 15px 25px;
           font-size: 1.2rem;
           font-weight: bold;
-          border-radius: 8px;
+          border-radius: 35px;
           text-decoration: none;
           margin: auto;
           transition: background 0.3s ease;
@@ -99,19 +106,20 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #25d366;
+          background: #00cf4c;
           color: white;
           padding: 15px 25px;
           font-size: 1.2rem;
           font-weight: bold;
-          border-radius: 8px;
+          border-radius: 35px;
           text-decoration: none;
           margin: auto;
           transition: background 0.3s ease;
           gap: 10px;
         }
 
-        .btn-whatsapp:hover { background: #1ebe5d; }
+        .btn-ligar:hover {background: #0060c6; }
+        .btn-whatsapp:hover { background: #008d34; }
         .btn-whatsapp img { width: 26px; height: 26px; }
 
         h2 { color: #ffffff; border-left: 5px solid #ff6600; padding-left: 10px; }
@@ -240,10 +248,11 @@
 
         /* Responsivo */
         @media (max-width: 1024px) {
-          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem; text-align: center; }
-          header img { margin: 0 0 10px 0; width: 200px; height: 200px; }
+          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem; text-align: center; background: linear-gradient(to bottom, #3a3a3a 75%, #ff6600);}
+          header img { margin: 0 0 10px 0; width: 400px; height: 400px; }
+          .header-text { -webkit-text-stroke-width: 0.4px; }
           header h1 { font-size: 1.44rem; }
-          header p { font-size: 0.864rem; }
+          header p { font-size: 1rem; }
           .dual-section { flex-direction: column; }
         }
 
@@ -313,6 +322,11 @@
           <img src="https://lh3.googleusercontent.com/p/AF1QipPtdEM7vjjOcRDAUOqFunpru-erameFSVS5VZ-F=s1360-w1360-h1020" alt="Serviço 5" onclick="openLightbox(4)">
           <img src="https://lh3.googleusercontent.com/p/AF1QipOdLK04pnL2qhoT_EHWgQ0O2EMq62mOEAq6gUzR=s1360-w1360-h1020" alt="Serviço 6" onclick="openLightbox(5)">
           <img src="https://lh3.googleusercontent.com/p/AF1QipMmY1wymwo1R2Bu0ApbwN6XPpbfEfIhM-02eCdZ=s1360-w1360-h1020" alt="Serviço 7" onclick="openLightbox(6)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOWqPj7RpF9otRjZ_IUbvNWH6lzHsxMfV9WaOqT=s1360-w1360-h1020" alt="Serviço 8" onclick="openLightbox(7)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020" alt="Serviço 9" onclick="openLightbox(8)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMdeMAxYx0Mj-4quL9QOV-gvY3U2hlUH0z3Sw3n=s1360-w1360-h1020" alt="Serviço 10" onclick="openLightbox(9)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipM2i5bgKyG9_smm62lC1Hg5lmykexsSmY0ms4Gw=s1360-w1360-h1020" alt="Serviço 11" onclick="openLightbox(10)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipM1Qoo4MygUwzy_jZihojo9Jr0_GlREZll8TYxJ=s1360-w1360-h1020" alt="Serviço 12" onclick="openLightbox(11)">
         </div>
       </div>
       <div class="container">
@@ -356,7 +370,12 @@
           "https://lh3.googleusercontent.com/p/AF1QipM8i45_Yvm1BU_1MOrhu4ZFv3H9oSjHTkfxkU4u=s1360-w1360-h1020",
           "https://lh3.googleusercontent.com/p/AF1QipPtdEM7vjjOcRDAUOqFunpru-erameFSVS5VZ-F=s1360-w1360-h1020",
           "https://lh3.googleusercontent.com/p/AF1QipOdLK04pnL2qhoT_EHWgQ0O2EMq62mOEAq6gUzR=s1360-w1360-h1020",
-          "https://lh3.googleusercontent.com/p/AF1QipMmY1wymwo1R2Bu0ApbwN6XPpbfEfIhM-02eCdZ=s1360-w1360-h1020"
+          "https://lh3.googleusercontent.com/p/AF1QipMmY1wymwo1R2Bu0ApbwN6XPpbfEfIhM-02eCdZ=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipOWqPj7RpF9otRjZ_IUbvNWH6lzHsxMfV9WaOqT=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipMdeMAxYx0Mj-4quL9QOV-gvY3U2hlUH0z3Sw3n=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipM2i5bgKyG9_smm62lC1Hg5lmykexsSmY0ms4Gw=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipM1Qoo4MygUwzy_jZihojo9Jr0_GlREZll8TYxJ=s1360-w1360-h1020"
         ];
         let currentIndex = 0;
 
