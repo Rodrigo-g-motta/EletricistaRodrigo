@@ -34,13 +34,12 @@
           inset: 0;
           z-index: 0;
           pointer-events: none;
-          background-image: linear-gradient(to right, #3a3a3a 74%, transparent 87%), url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020');
-          background-position: right 45%;
+          background-image:linear-gradient(to right, #3a3a3a 65%, transparent 87%), url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020');
+          background-position: 88% 40%;
           background-repeat: no-repeat;
           background-size: none;
-          /*filter: blur(20px);
-          transform: scale(1.03);
-          opacity: 0.95;*/
+          /*filter: blur(20px);*/
+          transform: scale(1.2);
         }
 
         /* camada nítida central (apenas parte visível da imagem) */
@@ -98,6 +97,24 @@
           padding: 1rem;
           border-radius: 10px;
           box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .container1 {
+          position: relative;
+          overflow: hidden;
+        }
+        .container1::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+          pointer-events: none;
+          background-image: url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');
+          background-repeat: no-repeat;
+          background-position: right 45%;
+          background-size:cover;
+          z-index: -1;
+          opacity: 0.1;
         }
 
         .dual-section {
@@ -284,28 +301,21 @@
 
         /* Responsivo */
         @media (max-width: 1024px) {
-          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem; text-align: center; background: linear-gradient(to bottom, #3a3a3a 75%, #ff6600);}
-          header::before{
-            background-size: cover;
-            /*background-position: bottom 40% left 30%;*/
-            background-image: url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');
-            opacity: 0.2;
-          }
-          header::after{
-            background-image:radial-gradient(circle at top,transparent 50%, #853500 100%);
-          }
+          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem; text-align: center; background: linear-gradient(to bottom, #3a3a3a 75%, #ff6600); }
+          header::before{ opacity: 0.2; background-size: cover; background-image: url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020'); }
+          header::after{ background-image:radial-gradient(circle at top,transparent 50%, #853500 100%); }
           header img { margin: 0 0 10px 0; width: 400px; height: 400px; }
           .header-text { -webkit-text-stroke-width: 0px; }
           header h1 { font-size: 1.5rem; }
           header p { font-size: 1rem; }
           .dual-section { flex-direction: column; }
-          /*NOVO*/
         }
 
         @media (max-width: 768px) {
-          header::before{background-size: cover;}
+          header::before{background-size: cover; }
           .container, .container1 { margin: 1rem; padding: 1rem; }/**/
-          .container1 h2 { font-size: 1.1rem; opacity: 1; color: #ffffff;}
+          .container1 h2 { font-size: 1.1rem; opacity: 1; color: #ffffff; }
+          .container1::before { background-position: right 45%; background-image: url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020'); }
           /*.container1{background-image: url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020');} /*Ajustar sem apagar as letras*/
           /*.btn-whatsapp { font-size: 1rem; padding: 12px 18px; }*/
           .lightbox img { max-width: 95%; max-height: 70%; }
@@ -334,14 +344,21 @@
       <header>
         <img src="https://lh3.googleusercontent.com/p/AF1QipOKnL2fKcvEOHY4alZDu5gSL5v-Lesp1xMgwbJX=s1360-w1360-h1020" class="Eletricista" alt="Eletricista">
         <div class="header-text">
-          <h1>Eletricista 24h em Caxias do Sul </h1>
-          <p>Residencial e Industrial - Atendimento emergencial rápido e seguro.</p>
+          <h1>Técnico em Automação Industrial e </h1>
+          <h1>Elétrica Predial | Caxias do Sul - 24h </h1>
+          <p>Atendimento Especializado, Seguro e Efetivo.</p>
         </div>
       </header>
 
       <div class="container1">
+        <h2> 
+          <p>⚠️NÃO ESPERE O PREJUIZO CHEGAR.</p>
+          <p>A manutenção correta da instalação evita perdas de mais de R$ 5.000 em equipamentos queimados, previne incêndios e garante a segurança de todos a sua volta.</p>
+        </h2>
         <h2>
           <p>✨Além da verificação e resolução do seu problema também será feita uma análise geral, lhe fornecendo informações extremamente valiosas sobre a condição da sua instalação.</p>
+        </h2>
+        <h2>  
           <p>⚠️Para garantir o seu atendimento certifique-se de que seu medidor de energia esteja em dia com a RGE e sem alterações.</p>
         </h2>
       </div>
