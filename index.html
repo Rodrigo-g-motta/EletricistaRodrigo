@@ -56,8 +56,8 @@
           background-repeat: no-repeat;
           background-size: none;
           /* define a área nítida que sobrepõe o blur nas bordas */
-          width: 100%;   /* largura da área nítida — ajuste se quiser mais/menos área nítida */
-          height: 100%;  /* altura da área nítida */
+          width: 100%;
+          height: 100%;
           box-shadow: 0 0 0 rgba(0,0,0,0); /* sem alterar aparência, apenas reserva camada */
         }
 
@@ -100,8 +100,9 @@
         }
 
         .container1 {
+          height: 1400px;
           position: relative;
-          overflow: hidden;
+          overflow:hidden;
         }
         .container1::before {
           content: "";
@@ -109,12 +110,11 @@
           inset: 0;
           z-index: 0;
           pointer-events: none;
-          background-image: url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');
+          background-image: linear-gradient(to bottom, #3a3a3a 33%, transparent 87%), url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');
           background-repeat: no-repeat;
-          background-position: right 45%;
-          background-size:cover;
+          background-position: 50% 100%;
+          background-size:contain;
           z-index: -1;
-          opacity: 0.1;
         }
 
         .dual-section {
@@ -309,25 +309,24 @@
           header h1 { font-size: 1.5rem; }
           header p { font-size: 1rem; }
           .dual-section { flex-direction: column; }
+          .container1{ height: 1150px;} 
+          .container1::before { background-size: cover; background-position: 50% 260px; background-image: linear-gradient(to bottom, #3a3a3a 25%, transparent 35%), url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020'); }
         }
 
         @media (max-width: 768px) {
           header::before{background-size: cover; }
-          .container, .container1 { margin: 1rem; padding: 1rem; }/**/
+          .container, .container1 { margin: 1rem; padding: 1rem; }
           .container1 h2 { font-size: 1.1rem; opacity: 1; color: #ffffff; }
-          .container1::before { background-position: right 45%; background-image: url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020'); }
-          /*.container1{background-image: url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020');} /*Ajustar sem apagar as letras*/
-          /*.btn-whatsapp { font-size: 1rem; padding: 12px 18px; }*/
           .lightbox img { max-width: 95%; max-height: 70%; }
           .prev, .next, .close-btn { width: 50px; height: 50px; font-size: 2rem; line-height: 50px; }
           .prev { left: 25%; top: 50%; }
           .next { right: 25%; top: 50%; }
           .close-btn { top: 10px; right: 10px; }
-
-          /*NOVO*/
           .Eletricista { width: 400px; }
           header h1 { font-size: 1.5rem; }
           header p { font-size: 1rem; }
+          .container1{ height: 900px;} 
+          .container1::before { background-size: cover; background-position: 50% 170px; background-image: linear-gradient(to bottom, #3a3a3a 20%, transparent 30%), url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020'); }
         }
 
         @media (max-width: 480px) {
@@ -336,7 +335,8 @@
           .Eletricista { width: 400px; }
           header h1 { font-size: 1.5rem; }
           header p { font-size: 1rem; }
-        }
+          .container1{ height: 850px;} 
+          .container1::before { background-size: contain; background-position: 50% 350px; background-image: linear-gradient(to bottom, #3a3a3a 15%, transparent 30%), url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020'); }
       </style>
     </head>
 
