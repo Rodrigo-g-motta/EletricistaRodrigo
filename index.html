@@ -8,7 +8,7 @@
         body {
           font-family: Arial, sans-serif;
           background-color: #3a3a3a;
-          /*color: #333;*/
+          /**/color: #333;
           margin: 0;
           padding: 0;
           line-height: 1.6;
@@ -16,6 +16,7 @@
 
         /* ========== HEADER: agora usa pseudo-camadas para blur nas bordas ========== */
         header{
+          color: #ffffff;
           display: flex;
           align-items: center;
           padding: 0.4rem 0.6rem;
@@ -29,6 +30,7 @@
 
         /* camada borrada (BORDAS)*/ 
         header::before{
+          color: #ffffff;
           content: "";
           position: absolute;
           inset: 0;
@@ -100,6 +102,7 @@
         }
 
         .container1 {
+          
           height: 1400px;
           position: relative;
           overflow:hidden;
@@ -108,7 +111,6 @@
           content: "";
           position: absolute;
           inset: 0;
-          z-index: 0;
           pointer-events: none;
           background-image: linear-gradient(to bottom, #3a3a3a 33%, transparent 87%), url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');
           background-repeat: no-repeat;
@@ -125,6 +127,7 @@
         }
 
         .container2, .container3 {
+          color: #ffffff;
           flex: 1;
           min-width: 300px;
           padding: 0rem 2rem 0rem 0rem;
