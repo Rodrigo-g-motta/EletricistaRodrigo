@@ -148,6 +148,22 @@
           margin: 0;
         }
 
+        /* --- Efeito Reveal Global --- */
+        .reveal {
+          opacity: .2;
+          transform: translateY(30px);
+          filter: blur(10px);
+          transition: opacity 0.9s ease, transform 0.9s ease, filter 0.9s ease;
+        }
+
+        .reveal.active {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+        /*-----------------------------------------*/
+
+
         .container, .container1 {
           color: #ffffff;
           max-width: 1100px;
@@ -567,8 +583,16 @@
       </div>
 
       <footer>
-        © 2025 Eletricista Rodrigo | Atendimento 24h em Caxias do Sul
+        © <span id="ano-atual"></span> Eletricista Rodrigo | Atendimento 24h em Caxias do Sul
       </footer>
+
+      
+      <script>
+
+        const data = new Date();
+        const ano = data.getFullYear();
+        document.getElementById("ano-atual").textContent = ano;
+      </script>
 
       <script>
         const images = [
@@ -627,6 +651,30 @@
             img.onload = () => img.style.opacity = 1;
           }, 200);
         }
+      </script>
+
+      <script>
+        // Seleciona todos os elementos do body, menos o header
+        const elements = document.querySelectorAll('body *:not(header):not(header *):not(.lightbox):not(.lightbox *)');
+
+        elements.forEach(el => {
+          el.classList.add('reveal');
+        });
+
+        // Cria o observador de interseção
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target); // ativa só uma vez
+            }
+          });
+        }, { threshold: 0.01 });
+
+        // Ativa o observador para cada elemento
+        document.querySelectorAll('.reveal').forEach(el => {
+          observer.observe(el);
+        });
       </script>
 
     </body>
