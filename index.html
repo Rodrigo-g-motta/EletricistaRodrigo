@@ -256,10 +256,25 @@
 
         footer { text-align: center; font-size: 0.9rem; padding: 1.5rem; color: #ffffff; }
 
+        /*Avaliações*/
+        .avaliacoes {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          gap: 10px;
+          margin: 1.5rem 0;
+        }
+        .avaliacoes img {
+          width: 100%;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: transform 0.2s;
+        }
+        .avaliacoes img:hover { transform: scale(1.05); }
+        
         /* Galeria */
         .gallery {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
           gap: 10px;
           margin: 1.5rem 0;
         }
@@ -432,6 +447,20 @@
         </div>
       </header>
 
+
+      <div class="container">
+        <div class="avaliacoes">
+
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPWNybVTe2AI03Y6xX5Hg6oYrYmMchorwu_-M7R=s1360-w1360-h1020" alt="Avaliação 1" onclick="openLightbox(24)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOnzjve2NDVU98wNEZzeIf4fQfbriSaboLB9SWu=s1360-w1360-h1020" alt="Avaliação 2" onclick="openLightbox(25)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMbhiwMKF9irtFte6RynJSQVkGRdDUI6y7gr2qi=s1360-w1360-h1020" alt="Avaliação 3" onclick="openLightbox(26)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOhvYYjdT7kl6pzS1XfXdRLqQAoJPCXbA2m6zd1=s1360-w1360-h1020" alt="Avaliação 4" onclick="openLightbox(27)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPEYideLROeJ3n-RHJJvBPmQCddadK1EvlBCFDk=s1360-w1360-h1020" alt="Avaliação 5" onclick="openLightbox(28)">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNLha3fh6UP1626RfTJdw08qV6imsE6kI25hMp8=s1360-w1360-h1020" alt="Avaliação 6" onclick="openLightbox(29)">
+        </div>
+      </div>
+
+      
       <div class="container1">
         <h2> 
           <p>⚠️NÃO ESPERE O PREJUIZO CHEGAR.</p>
@@ -616,7 +645,13 @@
           "https://lh3.googleusercontent.com/p/AF1QipOggFnPZqoKY0P0WuSLKlp1e0dGYJNr-suJLCSA=s1360-w1360-h1020",
           "https://lh3.googleusercontent.com/p/AF1QipOAKmcFQ7nvjCa5Su3KRZc4K617CosUKEcCfEZv=s1360-w1360-h1020",
           "https://lh3.googleusercontent.com/p/AF1QipN7I3t3ArRtrQXcQohr7z_1uenlXiNGS9u_zg55=s1360-w1360-h1020",
-          "https://lh3.googleusercontent.com/p/AF1QipPcn48k1n1RRxEG6LldoFjLDasKaWcAfsNwZ0nq=s1360-w1360-h1020"
+          "https://lh3.googleusercontent.com/p/AF1QipPcn48k1n1RRxEG6LldoFjLDasKaWcAfsNwZ0nq=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipPWNybVTe2AI03Y6xX5Hg6oYrYmMchorwu_-M7R=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipOnzjve2NDVU98wNEZzeIf4fQfbriSaboLB9SWu=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipMbhiwMKF9irtFte6RynJSQVkGRdDUI6y7gr2qi=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipOhvYYjdT7kl6pzS1XfXdRLqQAoJPCXbA2m6zd1=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipPEYideLROeJ3n-RHJJvBPmQCddadK1EvlBCFDk=s1360-w1360-h1020",
+          "https://lh3.googleusercontent.com/p/AF1QipNLha3fh6UP1626RfTJdw08qV6imsE6kI25hMp8=s1360-w1360-h1020"
         ];
         let currentIndex = 0;
 
