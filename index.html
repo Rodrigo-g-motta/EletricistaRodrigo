@@ -17,8 +17,12 @@
       <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmX26yvqWH-eQVsSjgVql5QZmMhWvo132jicBYvxl1ey7TttuUw7OS8cTsA4grU7P3JgNdKfTf_zaWDuTLU5ADlZMmpVK8f2FonptWLwrF_mOoSf7_OfrZPKVe9XiLdRGHF0j7YeHP-h9xJ=s1360-w1360-h1020">
       
       <link rel="preload" href="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn_LUYp4FzJ9fOnSk788deAd-4w3Auca5hCEuIJ1naUjAKPSRlxQs_epTGjS1EoHnGaO6VxBzETWrfopJO0RBAZI2JA4aFADBx1yHfvqOvEg_UCGxYbJ6KpXue_vDMN3y1NCVP165M_aIIK=s1360-w1360-h1020" as="image" fetchpriority="high">  
+      <link rel="preconnect" href="https://googleapis.com">
+      <link rel="preconnect" href="https://gstatic.com" crossorigin>
+      <link href="https://googleapis.com/css2?family=Black+Ops+One&family=Special+Elite&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
 
       <style>
+        
         body {
           font-family: Arial, sans-serif;
           background-color: #3a3a3a;
@@ -112,7 +116,7 @@
           right: 0;
           width: 100%;
           height: 100%;
-          background: white;
+          background: rgb(255, 255, 255);
           animation: a-ltr-after 2s cubic-bezier(.37,0,.18,1) forwards;
           transform: translateX(-101%);
           /*z-index: 4;*/
@@ -151,17 +155,29 @@
           100% {transform: translateX(200%)}
         }
 
-
         header h1 {
+          /*-webkit-text-stroke: .2px rgb(0, 0, 0);*/
+          color: rgb(255, 255, 255);
+          text-shadow: 3px 2px 1px #000000;
           font-size: 3.2rem;
           margin: 0 0 0.1rem 0;
         }
 
         header p {
+          /*-webkit-text-stroke: .2px rgb(0, 0, 0);
+          font-family: Monospace;*/
+          color: rgb(255, 255, 255);
+          text-shadow: 3px 2px 1px #000000;
           font-size: 2rem;
           margin: 0;
         }
 
+        .container, .container1, .container2, .container3 {
+          /*-webkit-text-stroke: .1px rgb(0, 0, 0);
+          font-family: Monospace;*/
+          color: rgb(255, 255, 255);
+          text-shadow: 3px 2px 1px #000000;
+        }/**/
         /* --- Efeito Reveal Global --- */
         .reveal {
           opacity: 0;
@@ -182,7 +198,7 @@
           margin: 2rem auto;
           padding: 1rem;
           border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          box-shadow: 0 0 10px #853500;
         }
 
         .container1 {
@@ -217,7 +233,7 @@
           padding: 0rem 2rem 0rem 0rem;
           background: linear-gradient(to right, #3a3a3a 90%, #ce5200 100%);
           border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          box-shadow: 0 0 10px rgba(0,0,0,0.5);
           margin-bottom: 10px;
           
         }
@@ -405,9 +421,9 @@
 
         /* Responsivo */
         @media (max-width: 1024px) {
-          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem; text-align: center; background: linear-gradient(to bottom, #3a3a3a 75%, #ff6600); }
+          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem; text-align: center; background: linear-gradient(to bottom, #3a3a3a 75%, #000000); }
           header::before{ opacity: 0.1; background-size: cover; background-image: url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020'); }
-          header::after{ background-image:radial-gradient(circle at top,transparent 50%, #853500 100%); }
+          header::after{ background-image:radial-gradient(circle at top,transparent 2%, #3a3a3a 100%); }/**/
           header img { margin: 0 0 10px 0; width: 400px; height: 400px; }
           .header-text { -webkit-text-stroke-width: 0px; }
           header h1 { font-size: 1.5rem; }
@@ -430,18 +446,18 @@
           .Eletricista { width: 400px; }
           header h1 { font-size: 1.5rem; }
           header p { font-size: 1rem; }
-          .container1{ height: 900px;} 
+          .container1{ height: 900px;}
           .container1::before { background-size: cover; background-position: 50% 230px; background-image: linear-gradient(to bottom, #3a3a3a 19%, transparent 30%), url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020'); }
         }
 
         @media (max-width: 480px) {
           header { flex-direction: column; align-items: center; width: auto; padding: 0.9rem 0.6rem; text-align: center;}
-          header::before{background-size: cover;} 
+          header::before{background-size: cover;}
           .Eletricista { width: 400px; }
           header h1 { font-size: 1.5rem; }
           header p { font-size: 1rem; }
           .header-text span::before{ background-size: 535px; background-position: 50% 85%; 
-            background-image: linear-gradient(to bottom, transparent -1500%, #853500 210%), url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');}
+            background-image: linear-gradient(to bottom, transparent -4500%, #323232 210%), url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');}
           .header-text span::after{ background: white;}
             .container1{ height: 850px;} 
           .container1::before { background-size: contain; background-position: 50% 350px; background-image: linear-gradient(to bottom, #3a3a3a 15%, transparent 30%), url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020'); }          
@@ -483,6 +499,14 @@
         </div>
       </div>
 
+      <div class="container">
+        <div class="dual-section">
+          <a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda+agora." class="btn-whatsapp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chame no WhatsApp.
+          </a>
+          <a href="tel:+5554991878144" class="btn-ligar">📞 Ligar agora.</a>	
+        </div>
+      </div>
 
       <div class="container1">
         <h2>
@@ -507,15 +531,6 @@
             Além da corretiva, é realizada uma análise técnica preventiva da sua rede, entregando a você um diagnóstico sobre a segurança da sua instalação.
           </p>
         </h2>
-      </div>
-
-      <div class="container">
-        <div class="dual-section">
-          <a href="tel:+5554991878144" class="btn-ligar">📞 Ligar agora.</a>
-          <a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda+agora." class="btn-whatsapp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chame no WhatsApp.
-          </a>	
-        </div>
       </div>
 
       <div class="container">
@@ -545,6 +560,15 @@
           <img src="https://lh3.googleusercontent.com/p/AF1QipOAKmcFQ7nvjCa5Su3KRZc4K617CosUKEcCfEZv=s1360-w1360-h1020" alt="Serviço 22" onclick="openLightbox(21)" loading="lazy">
           <img src="https://lh3.googleusercontent.com/p/AF1QipN7I3t3ArRtrQXcQohr7z_1uenlXiNGS9u_zg55=s1360-w1360-h1020" alt="Serviço 23" onclick="openLightbox(22)" loading="lazy">
           <img src="https://lh3.googleusercontent.com/p/AF1QipPcn48k1n1RRxEG6LldoFjLDasKaWcAfsNwZ0nq=s1360-w1360-h1020" alt="Serviço 24" onclick="openLightbox(23)" loading="lazy">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="dual-section">
+          <a href="tel:+5554991878144" class="btn-ligar">📞 Ligar agora.</a>
+          <a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda." class="btn-whatsapp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Falar com o eletricista agora
+          </a>	
         </div>
       </div>
 
@@ -600,16 +624,6 @@
           
         </div>
       </div>  
-
-
-      <div class="container">
-        <div class="dual-section">
-          <a href="tel:+5554991878144" class="btn-ligar">📞 Ligar agora.</a>
-          <a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda." class="btn-whatsapp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Falar com o eletricista agora
-          </a>	
-        </div>
-      </div>
 
       <div class="container">
         <div class="dual-section">
