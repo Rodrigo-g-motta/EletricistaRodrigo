@@ -778,16 +778,8 @@
           } else {
             botao.classList.remove('ativo');
           }
-          botao.addEventListener('transitionend', (e) => {
-            // Executa apenas quando a propriedade transform terminar de animar
-            if (e.propertyName === 'transform') {
-              botao.classList.remove('saindo');
-              
-            }
-          });
         });
 
-        
       </script>
     </body>
 </html>
