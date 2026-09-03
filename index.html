@@ -237,7 +237,7 @@
           margin-bottom: 10px;
         }
 
-      .btn-ligar {
+        .btn-ligar {
           max-width: 300px;
           text-align: center;
           align-self: center;
@@ -391,14 +391,29 @@
 
         /* Botões flutuantes */
         .floating-buttons {
+          transform: translateY(100px);/**/
           position: fixed;
-          bottom: 20px;
           right: 20px;
           display: flex;
           flex-direction: column;
           gap: 10px;
           z-index: 100;
+          opacity: 0;
+          bottom: -150px;
+          
         }
+
+        .floating-buttons.ativo {
+          transform: translateY(0);
+          bottom: 20px;
+          opacity: 1;
+        }
+
+        .floating-buttons.saindo {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+
         .floating-buttons a {
           display: flex;
           align-items: center;
@@ -409,8 +424,8 @@
           color: white;
           text-decoration: none;
           font-size: 28px;
-          box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-          transition: transform 0.2s ease;
+          box-shadow: 0 3px 6px rgba(0,0,0,1);
+          transition: transform .5s cubic-bezier(0.25, 1, 0.5, 1), opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
         }
         .floating-buttons a:hover { transform: scale(1.1); }
         .whatsapp-float {
@@ -491,6 +506,14 @@
         </div>
       </header>
 
+      <div class="container">
+        <div class="dual-section">
+          <a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda+agora." class="btn-whatsapp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chame no WhatsApp.
+          </a>
+          <a href="tel:+5554991878144" class="btn-ligar">📞 Ligar agora.</a>	
+        </div>
+      </div>
 
       <div class="container">
         <div class="avaliacoes">
@@ -500,15 +523,6 @@
           <img src="https://lh3.googleusercontent.com/p/AF1QipOhvYYjdT7kl6pzS1XfXdRLqQAoJPCXbA2m6zd1=s1360-w1360-h1020" alt="Avaliação 4" onclick="openLightbox(27)">
           <img src="https://lh3.googleusercontent.com/p/AF1QipPEYideLROeJ3n-RHJJvBPmQCddadK1EvlBCFDk=s1360-w1360-h1020" alt="Avaliação 5" onclick="openLightbox(28)">
           <img src="https://lh3.googleusercontent.com/p/AF1QipNLha3fh6UP1626RfTJdw08qV6imsE6kI25hMp8=s1360-w1360-h1020" alt="Avaliação 6" onclick="openLightbox(29)">
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="dual-section">
-          <a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda+agora." class="btn-whatsapp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chame no WhatsApp.
-          </a>
-          <a href="tel:+5554991878144" class="btn-ligar">📞 Ligar agora.</a>	
         </div>
       </div>
 
@@ -761,6 +775,27 @@
           observer.observe(el);
         });
       </script>
+      <script>
+        window.addEventListener('scroll', () => {
+          const botao = document.querySelector('.floating-buttons');
+          // Se rolar mais de 400px para baixo, mostra o botão
+          if (window.scrollY > 400) {
+            botao.classList.add('ativo');
+          } else {
+            botao.classList.remove('ativo');
+            botao.classList.add('saindo');
+            
+          }
+          botao.addEventListener('transitionend', (e) => {
+            // Executa apenas quando a propriedade transform terminar de animar
+            if (e.propertyName === 'transform') {
+              botao.classList.remove('saindo');
+              
+            }
+          });
+        });
 
+        
+      </script>
     </body>
 </html>
