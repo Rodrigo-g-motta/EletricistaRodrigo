@@ -37,7 +37,7 @@
           color: #ffffff;
           display: flex;
           align-items: center;
-          padding: 0.4rem 0.6rem;/**/
+          padding: 0.4rem 0.6rem;
           flex-wrap: wrap;
           width: 100%;
           height: 100%;
@@ -77,13 +77,13 @@
           background-size: none;
           /* define a área nítida que sobrepõe o blur nas bordas */
           width: 100%;
-          height: 100%;
+          height: 101%;
           box-shadow: 0 0 0 rgba(0,0,0,0); /* sem alterar aparência, apenas reserva camada */
         }
 
         .Eletricista {
-          width: 440px;
-          height: 440px;
+          width: 20%;
+          height: auto;
           border-radius: 8px;
           margin-right: 2px;
           object-fit:contain;
@@ -421,12 +421,12 @@
 
         /* Responsivo */
         @media (max-width: 1024px) {
-          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem 0rem 0.6rem; text-align: center; background: #3a3a3a; }
+          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem .6rem 0.6rem; text-align: center; background: #3a3a3a; }
           header::before{ opacity: 0.1; background-size: cover; background-image: url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020'); }
-          header::after{ background-image:linear-gradient(to top, rgb(201, 95, 24) .8%, transparent .8%); }
+          header::after{ background-image:linear-gradient(to top, rgb(201, 95, 24) 1.3%, transparent .8%); }
           /*radial-gradient(circle at top,transparent 2%, #853500 100%);*/
           /*linear-gradient(to top, #3a3a3a 33%, transparent 87%)*/
-          header img { margin: 0 0 10px 0; width: 400px; height: 400px; }
+          header img { margin: 0 0 10px 0; width: 400px; height: auto; }
           .header-text { -webkit-text-stroke-width: 0px; }
           header h1 { font-size: 1.5rem; }
           header p { font-size: 1rem; }
@@ -445,9 +445,7 @@
           .lightbox img { max-width: 95%; max-height: 70%; }
           .prev, .next, .close-btn { width: 50px; height: 50px; font-size: 2rem; line-height: 50px; }
           .close-btn { top: 10px; right: 10px; }
-          .Eletricista { width: 400px; }
-          header h1 { font-size: 1.5rem; }
-          header p { font-size: 1rem; }
+          .Eletricista { width: 85%; }
           .container1{ height: 900px;}
           .container1::before { background-size: cover; background-position: 50% 230px; background-image: linear-gradient(to bottom, #3a3a3a 19%, transparent 30%), url('https://lh3.googleusercontent.com/p/AF1QipMnBg7OMfJPjDqmkM8gxrDy6ncgsb2mef_cp6oQ=s1360-w1360-h1020'); }
         }
@@ -455,9 +453,7 @@
         @media (max-width: 480px) {
           header { flex-direction: column; align-items: center; width: auto; padding: 0.9rem 0.6rem; text-align: center;}
           header::before{background-size: cover;}
-          .Eletricista { width: 400px; }
-          header h1 { font-size: 1.5rem; }
-          header p { font-size: 1rem; }
+          /*.Eletricista { width: 300px; }*/
           .header-text span::before{ background-size: 535px; background-position: 50% 85%; 
             background-image: linear-gradient(to bottom, transparent -1500%, #3a3a3a 210%), url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');}
           .header-text span::after{ background: white;}
