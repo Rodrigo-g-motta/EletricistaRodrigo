@@ -253,15 +253,16 @@
         }
 
         .btn-ligar {
+          height: 55px;
           max-width: 300px;
           text-align: center;
           align-self: center;
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #007bff;
+          /*background: #007bff;*/
           color: white;
-          padding: 15px 25px;
+          padding: 2px 20px;
           font-size: 1.2rem;
           font-weight: bold;
           border-radius: 35px;
@@ -269,32 +270,40 @@
           margin: auto;
           transition: background 0.3s ease;
           gap: 10px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          box-shadow: 0 0 10px rgb(255, 120, 30);
+        }
+        .btn-ligar img {
+          width: 35px; height: 35px;
+          filter: invert(40%) sepia(94%) saturate(624%) hue-rotate(348deg) brightness(103%) contrast(91%);
         }
 
         .btn-whatsapp {
+          height: 55px; 
           max-width: 300px;
           text-align: center;
           align-self: center;
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #00cf4c;
-          color: white;
-          padding: 15px 25px;
+          /*background-color: #00cf4c;*/
+          color: rgb(255, 255, 255);
+          padding: 2px 20px;
           font-size: 1.2rem;
           font-weight: bold;
           border-radius: 35px;
           text-decoration: none;
           margin: auto;
           transition: background 0.3s ease;
-          gap: 10px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          gap: 10px;  
+          box-shadow: 0 0 10px rgb(255, 120, 30);
+        }
+        .btn-whatsapp img {
+          width: 50px; height: 50px;
+          filter: invert(40%) sepia(94%) saturate(624%) hue-rotate(348deg) brightness(103%) contrast(91%);
         }
 
         .btn-ligar:hover {background: #0060c6; }
         .btn-whatsapp:hover { background: #008d34; }
-        .btn-whatsapp img { width: 26px; height: 26px; }
 
         h2 { color: #ffffff; border-left: 5px solid rgb(201, 95, 24); padding-left: 10px; }
         ul { list-style: none; padding-left: 0;}
@@ -505,8 +514,6 @@
       <!-- End Google Tag Manager (noscript) -->
                   
       <header>
-              <!--https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn_LUYp4FzJ9fOnSk788deAd-4w3Auca5hCEuIJ1naUjAKPSRlxQs_epTGjS1EoHnGaO6VxBzETWrfopJO0RBAZI2JA4aFADBx1yHfvqOvEg_UCGxYbJ6KpXue_vDMN3y1NCVP165M_aIIK=s1360-w1360-h1020 -->
-<!--link anterior https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmTZZ4CsLKTDlPk1rYHfefh3snR85uoBLEj9QD8ANtzrMceCStNXO1wQ9GLq6CP4bIQxWGHtYtyzr-RL7Avw9XrwVOLdEQtLh1bG75o9WoVup9H4p8VQnInc97hMmxf6iYf2PbcYsgScIWh=s1360-w1360-h1020-->
         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn_LUYp4FzJ9fOnSk788deAd-4w3Auca5hCEuIJ1naUjAKPSRlxQs_epTGjS1EoHnGaO6VxBzETWrfopJO0RBAZI2JA4aFADBx1yHfvqOvEg_UCGxYbJ6KpXue_vDMN3y1NCVP165M_aIIK=s1360-w1360-h1020" class="Eletricista" alt="Eletricista" fetchpriority="high" width="1062" height="1062" sizes="(max-width: 1062px) 1062px, 1062px" >
         <div class="header-text">
           <span>
@@ -522,9 +529,12 @@
         <h1>⚠️ Problemas elétricos se agravam rápido.</h1>
         <div class="dual-section">
           <a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda+agora." class="btn-whatsapp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Atendimento agora.
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/WhatsApp_font_awesome.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="WhatsApp"> Atendimento agora.
           </a>
-          <a href="tel:+5554991878144" class="btn-ligar">📞 Ligar agora.</a>	
+          <a href="tel:+5554991878144" class="btn-ligar"> 
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Feather-communication-phone-call.svg/1920px-Feather-communication-phone-call.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" 
+            alt="ligar"> Ligar agora.
+          </a>
         </div>
       </div>
 
@@ -597,10 +607,14 @@
       <div class="container">
         <h1>🚀 Aumente o valor do seu imóvel.</h1>
         <div class="dual-section">
-          <a href="tel:+5554991878144" class="btn-ligar">📞 Ligar agora.</a>
+          <a href="tel:+5554991878144" class="btn-ligar">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Feather-communication-phone-call.svg/1920px-Feather-communication-phone-call.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" 
+            alt="ligar"> Ligar agora.
+          </a>
+          
           <a href="https://wa.me/5554991878144?text=Olá,+preciso+de+ajuda+para+serviços+da+área+elétrica." class="btn-whatsapp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Fale com o eletricista.
-          </a>	
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/WhatsApp_font_awesome.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="WhatsApp"> Fale com o eletricista.
+          </a>
         </div>
       </div>
 
