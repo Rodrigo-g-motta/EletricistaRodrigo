@@ -16,6 +16,14 @@
       <title>Eletricista em Caxias do Sul | Manutenção Elétrica 24 horas</title>
       <meta name="description" content="Investimento que agrega valor ao seu patrimônio. Eletricista de manutenção predial e industrial em Caxias do Sul com atendimento 24 horas. Chame agora!" />
       <link rel="canonical" href="https://eletricistarodrigo.com.br/">
+
+      <link rel="icon" type="image/png" href="imagens/Emblema Metálico grande Eletricista Rodrigo.png">
+      
+      <link rel="preload" href="imagens/Emblema Metálico 3.9 Eletricista Rodrigo.png" as="image" fetchpriority="high">  
+      <link rel="preconnect" href="https://googleapis.com">
+      <link rel="preconnect" href="https://gstatic.com" crossorigin>
+      <link href="https://googleapis.com/css2?family=Black+Ops+One&family=Special+Elite&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
+
           <!-- Dados Estruturados LocalBusiness/Electrician (JSON-LD) -->
       <script type="application/ld+json">
       {
@@ -61,15 +69,9 @@
       }
       </script>
 
-      <link rel="icon" type="image/png" href="imagens/Emblema Metálico grande Eletricista Rodrigo.png">
-      
-      <link rel="preload" href="imagens/Emblema Metálico 3.9 Eletricista Rodrigo.png" as="image" fetchpriority="high">  
-      <link rel="preconnect" href="https://googleapis.com">
-      <link rel="preconnect" href="https://gstatic.com" crossorigin>
-      <link href="https://googleapis.com/css2?family=Black+Ops+One&family=Special+Elite&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
-
       <style>
-        
+/*..........*/
+
         body {
           font-family: Arial, sans-serif;
           background-color: rgb(58, 58, 58);
@@ -84,7 +86,7 @@
         }
 
         /* ========== HEADER: agora usa pseudo-camadas para blur nas bordas ========== */
-        header{
+        .header-visual{
           color: #ffffff;
           display: flex;
           align-items: center;
@@ -98,7 +100,7 @@
         }
 
         /* camada borrada (BORDAS)*/ 
-        header::before{
+        .header-visual::before{
           color: #ffffff;
           content: "";
           position: absolute;
@@ -114,7 +116,7 @@
         }
 
         /* camada nítida central (apenas parte visível da imagem)*/
-        header::after{
+        .header-visual::after{
           content: "";
           position: absolute;
           top: 50%;
@@ -130,6 +132,18 @@
           width: 100%;
           height: 101%;
           box-shadow: 0 0 0 rgba(0,0,0,0); /* sem alterar aparência, apenas reserva camada */
+        }
+        .header-menu{
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          padding: 0.4rem 0.6rem;
+          flex-wrap: wrap;
+          /*width: 100%;*/ 
+          height: 50px;
+          position: relative;     /* necessário para os pseudo-elementos posicionados */
+          /*overflow: hidden;*/
+          /* removido o background-image direto daqui - agora usamos ::before e ::after */
         }
 
         .Eletricista {
@@ -258,6 +272,7 @@
           border-radius: 10px;
           box-shadow: 0 0 10px rgb(201, 95, 24);
         }
+
         .container1 {
           color: #ffffff;
           max-width: 1100px;
@@ -514,19 +529,19 @@
 
         /* Responsivo */
         @media (max-width: 1024px) {
-          header { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem .6rem 0.6rem; text-align: center; background: #3a3a3a; }
-          header::before{ opacity: 0.1; background-size: cover; background-image: url('imagens/Montagem\ de\ quadros\ de\ comando\ em\ Caxias\ do\ Sul.jpeg'); }
-          header::after{ background-image:linear-gradient(to top, rgb(201, 95, 24) 1.3%, transparent .8%); }
+          .header-visual { flex-direction: column; align-items: center; padding: 0.9rem 0.6rem .6rem 0.6rem; text-align: center; background: #3a3a3a; }
+          .header-visual::before{ opacity: 0.1; background-size: cover; background-image: url('imagens/Montagem\ de\ quadros\ de\ comando\ em\ Caxias\ do\ Sul.jpeg'); }
+          .header-visual::after{ background-image:linear-gradient(to top, rgb(201, 95, 24) 1.3%, transparent .8%); }
           /*radial-gradient(circle at top,transparent 2%, #853500 100%);*/
           /*linear-gradient(to top, #3a3a3a 33%, transparent 87%)*/
-          header img { margin: 0 0 10px 0; width: 400px; height: auto; }
+          .header-visual img { margin: 0 0 10px 0; width: 400px; height: auto; }
           .header-text { -webkit-text-stroke-width: 0px; }
-          header h1, h2, h3 { font-size: 1.5rem; }
-          header p { font-size: 1rem; }
+          .header-visual h1, h2, h3 { font-size: 1.5rem; }
+          .header-visual p { font-size: 1rem; }
           .container h4 { font-size: 1.2rem; text-align: center; border-left: none;}
           .container1 p { font-size: 1.2rem; margin-top: 10px; margin-bottom: 10px;}
           .container1 h5 {margin-top: 0px; margin-bottom: 0px;}
-          h5 {margin-top: 15px; margin-bottom: 15px;}
+          h5 {margin-top: 15px; margin-bottom: 10px;}
           .header-text span::before{ background-size: 595px; background-position: 50% 78.3%; 
           background-image: linear-gradient(to bottom, transparent -1500%, #3a3a3a 210%), url('imagens/Montagem\ de\ quadros\ de\ comando\ em\ Caxias\ do\ Sul.jpeg');}
           .header-text span::after{ background: white;}
@@ -539,7 +554,7 @@
         }
 
         @media (max-width: 768px) {
-          header::before {background-size: cover; }
+          .header-visual::before {background-size: cover; }
           .container1 h4 { font-size: 1.1rem; opacity: 1; color: #ffffff; }
           .lightbox img { max-width: 95%; max-height: 70%; }
           .prev, .next, .close-btn { width: 50px; height: 50px; font-size: 2rem; line-height: 50px; }
@@ -550,8 +565,8 @@
         }
 
         @media (max-width: 480px) {
-          header { flex-direction: column; align-items: center; width: auto; padding: 0.9rem 0.6rem; text-align: center;}
-          header::before {background-size: cover;}
+          .header-visual { flex-direction: column; align-items: center; width: auto; padding: 0.9rem 0.6rem; text-align: center;}
+          .header-visual::before {background-size: cover;}
           /*.Eletricista { width: 300px; }
           .header-text span::before{ background-size: 535px; background-position: 50% 85%; 
           background-image: linear-gradient(to bottom, transparent -1500%, #3a3a3a 210%), url('https://lh3.googleusercontent.com/p/AF1QipOj9smTdUvR5OXaBahUkMoezOFpxKi_cvnFf0dp=s1360-w1360-h1020');}
@@ -560,7 +575,328 @@
           .container1 { height: 850px; margin: .5rem; }
           .container1::before { background-size: contain; background-position: 50% 350px; background-image: linear-gradient(to bottom, #3a3a3a 15%, transparent 30%), url('imagens/Instalação\ de\ motor\ elétrico\ em\ caxias\ do\ sul.jpeg'); }          
         }
+
+
+
+
+
+
+
+
+
+        /* --------------------------------------------------------- CABEÇALHO --------------------------------------------------------- */ 
+        .site-header { width: 100%; 
+          position: relative; 
+          z-index: 1000; 
+          background: #292929; 
+          color: white; 
+        } 
+
+        /* Área interna do cabeçalho */ 
+        .header-content { 
+          width: min(1200px, 92%); 
+          margin: 0 auto; 
+          min-height: 75px; 
+          display: flex; 
+          align-items: center; 
+          justify-content: space-between; 
+        }
+
+
+/*...............................*/
+        /* --------------------------------------------------------- MENU DESKTOP --------------------------------------------------------- */ 
+        .desktop-nav { 
+          display: flex; 
+          align-items: baseline; 
+          gap: 8px; 
+          z-index:2;
+          margin: auto;
+        } 
+        
+        /* Links */ 
+        .desktop-nav > a, .dropdown-button { 
+          color: white; 
+          text-decoration: none; 
+          background: transparent; 
+          border: none; 
+          padding: 12px 16px; 
+          font-family: inherit; 
+          font-size: 16px; 
+          cursor: pointer; 
+          border-radius: 5px; 
+          transition: background 0.25s ease, color 0.25s ease; 
+        } 
+        
+        /* Efeito ao passar o mouse */ 
+        .desktop-nav > a:hover, .dropdown-button:hover { background: #e87519; } 
+        /* --------------------------------------------------------- DROPDOWN DESKTOP --------------------------------------------------------- */ 
+        .nav-dropdown {
+          position: relative;
+        }
+
+        /* Botão */
+        .dropdown-button {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+        }
+
+        /* Seta */
+        .dropdown-button .arrow {
+          font-size: 18px;
+          transition: transform 0.3s ease;
+          width: 100%;
+          height: 45px;
+          font-weight: bolder;
+          font-size: 25px;
+        }
+
+        /* Quando o menu estiver aberto */
+        .nav-dropdown.active .arrow {
+          transform: rotate(180deg);
+        }
+
+        .mobile-nav {
+          position: relative;
+        }
+
+        .servico-menu-button {
+          align-items: center;
+          gap: 7px;
+        }
+
+        .servico-menu-button.active .arrow {
+          transform: rotate(180deg);
+          font-weight:lighter;
+        }
+
+        .servico-menu-button .arrow {
+          background: transparent;
+        }
+
+        /* --------------------------------------------------------- MENU SUSPENSO --------------------------------------------------------- */
+        .dropdown-menu {
+          position: absolute;
+          top: calc(100% + 8px);
+          left: 0;
+          min-width: 230px;
+          background: #333;
+          border-radius: 6px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+          overflow: hidden;
+          /* Estado fechado */
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-15px);
+          transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+          
+        }
+
+        /* Estado aberto */
+        .nav-dropdown.active .dropdown-menu {
+          /*position:relative;*/
+          display:block;
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          max-height: 600px;
+        }
+
+        /* Links do submenu */
+        .dropdown-menu a {
+          display: block;
+          padding: 13px 17px;
+          color: white;
+          text-decoration: none;
+          transition: background 0.2s ease;
+        }
+
+        .dropdown-menu a:hover {
+          background: #e87519;
+        }
+
+        /* --------------------------------------------------------- BOTÃO MOBILE --------------------------------------------------------- */
+        .mobile-menu-button {
+          display: none;
+          width: 46px;
+          height: 46px;
+          padding: 9px;
+          border: none;
+          border-radius: 5px;
+          background: transparent;
+          cursor: pointer;
+        }
+
+        /* Barras do ícone */
+        .mobile-menu-button span {
+          display: block;
+          width: 100%;
+          height: 3px;
+          margin: 5px 0;
+          background: white;
+          border-radius: 3px;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* --------------------------------------------------------- BOTÃO SERVIÇO --------------------------------------------------------- */
+        .servico-menu-button {
+          color: white;
+          width: 100%;
+          height: 60px;
+          padding: 10px 45%;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .servico-menu-button .arrow {
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 45px;
+          font-weight: bolder;
+          font-size: 25px;
+        }
+
+        /* Barras do ícone */
+        .servico-menu-button span {
+          display: block;
+          width: 100%;
+          height: 3px;
+          margin: 5px 0;
+          background: white;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* --------------------------------------------------------- ANIMAÇÃO DO ÍCONE HAMBÚRGUER --------------------------------------------------------- */
+        .mobile-menu-button.active span:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .mobile-menu-button.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .mobile-menu-button.active span:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* --------------------------------------------------------- MENU MOBILE --------------------------------------------------------- */
+        .mobile-nav {
+          display: none;
+          width: 100%;
+          background: #333;
+          overflow: hidden;
+          /* Fechado */
+          max-height: 0;
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: max-height 0.4s ease, opacity 0.3s ease,
+            transform 0.3s ease;
+        }
+
+        /* Aberto */
+        .mobile-nav.active {
+          max-height: 600px;
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Links mobile */
+        .mobile-nav a {
+          display: block;
+          padding: 16px 7%;
+          color: white;
+          text-decoration: none;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+          transition: background 0.2s ease;
+        }
+
+        .mobile-nav a:hover, .mobile-nav button:hover {
+          background: #e87519;
+        }
+
+
+        /* --------------------------------------------------------- MENU SERVIÇO --------------------------------------------------------- */
+        .servico-nav {
+          display: none;
+          width: 100%;
+          background: #333;
+          overflow: hidden;
+          /* Fechado */
+          max-height: 0;
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: max-height 0.4s ease, opacity 0.3s ease,
+            transform 0.3s ease;
+        }
+
+        /* Aberto */
+        .servico-nav.active {
+          max-height: 600px;
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Links serviço*/
+        .servico-nav a {
+          display: block;
+          padding: 16px 7%;
+          color: white;
+          text-decoration: none;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+          transition: background 0.2s ease;
+        }
+
+        .servico-nav a:hover {
+          background: #e87519;
+        }
+        /* ========================================================= RESPONSIVIDADE ========================================================= */
+        @media (max-width: 768px) {
+          /* Esconde menu desktop */
+          .desktop-nav {
+            display: none;
+          }
+
+          /* Mostra botão */
+          .mobile-menu-button {
+            display: block;
+          }
+
+          /* Mostra estrutura mobile */
+          .mobile-nav {
+            display: block;
+          }
+
+          /* Mostra botão */
+          .servico-menu-button {
+            display: flex;
+          }
+
+          /* Mostra estrutura mobile */
+          .servico-nav {
+            display: block;
+          }
+        }
+
+        /* ========================================================= TELAS GRANDES ========================================================= */
+        @media (min-width: 769px) {
+          .mobile-nav {
+            display: none !important;
+          }
+
+          .servico-nav {
+            display: none !important;
+          }
+        }
+/*...............................*/
+
+        html {
+          scroll-behavior: smooth;
+        }
       </style>
+      
     </head>
 
     <body>
@@ -571,7 +907,7 @@
       </noscript>
       <!-- End Google Tag Manager (noscript) -->
                   
-      <header>
+      <header class="header-visual">
         <img src="imagens/Emblema Metálico 3.9 Eletricista Rodrigo.png" class="Eletricista" alt="Eletricista Rodrigo" fetchpriority="high" width="1062" height="1062" sizes="(max-width: 1062px) 1062px, 1062px" >
         <div class="header-text">
           <span>
@@ -581,10 +917,174 @@
             <!--<p>Técnico em Automação Industrial</p>-->
           </span>
         </div>
+
+        <!--........................-->
+        
+
+        <!-- ================================================= BOTÃO MENU MOBILE ================================================= 
+        <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Abrir menu" aria-expanded="false"> 
+          <span></span> 
+          <span></span> 
+          <span></span> 
+        </button> -->
+        <!-- ===================================================== MENU MOBILE ===================================================== 
+        <nav class="mobile-nav" id="mobileNav"> 
+          <a href="index.html">Início</a> 
+          <button class="servico-menu-button" id="servicoMenuButton" type="button"  aria-label="Abrir submenu" aria-expanded="false"> Serviços 
+            <span class="arrow">⌄</span>
+          </button>
+          <nav class="servico-nav" id="servicoNav">
+            <a href="eletrica-residencial.html"> - Elétrica Residencial </a> 
+            <a href="eletrica-industrial.html"> - Elétrica Industrial </a> 
+          </nav>
+          <a href="#sobre">Sobre</a>
+          <a href="contato.html">Contato</a>
+        </nav>--> 
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            /* -----------------------------------------------------
+              ELEMENTOS
+            ----------------------------------------------------- */
+            const mobileButton = document.getElementById("mobileMenuButton");
+            const mobileNav = document.getElementById("mobileNav");
+            const servicoButton = document.getElementById("servicoMenuButton");
+            const servicoNav = document.getElementById("servicoNav");
+            const dropdown = document.querySelector(".nav-dropdown");
+            const dropdownButton = document.querySelector(".dropdown-button");
+
+            /* -----------------------------------------------------
+              MENU MOBILE
+            ----------------------------------------------------- */
+            mobileButton.addEventListener("click", function (event) {
+              event.stopPropagation();
+              mobileButton.classList.toggle("active");
+              mobileNav.classList.toggle("active");
+
+              const aberto = mobileNav.classList.contains("active");
+              mobileButton.setAttribute("aria-expanded", aberto);
+            });
+
+            /* -----------------------------------------------------
+              SUBMENU DESKTOP
+            ----------------------------------------------------- */
+            dropdownButton.addEventListener("click", function (event) {
+              event.stopPropagation();
+              dropdown.classList.toggle("active");
+            });
+
+            /* -----------------------------------------------------
+              FECHAR AO CLICAR FORA
+            ----------------------------------------------------- */
+            document.addEventListener("click", function (event) {
+              /* Fecha submenu desktop */
+              if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove("active");
+              }
+
+              /* Fecha menu mobile */
+              if (
+                !mobileNav.contains(event.target) &&
+                !mobileButton.contains(event.target)
+              ) {
+                mobileNav.classList.remove("active");
+                mobileButton.classList.remove("active");
+                mobileButton.setAttribute("aria-expanded", "false");
+              }
+            });
+
+            /* -----------------------------------------------------
+              FECHAR MENU MOBILE AO CLICAR EM UM LINK
+            ----------------------------------------------------- */
+            const mobileLinks = mobileNav.querySelectorAll("a");
+            mobileLinks.forEach(function (link) {
+              link.addEventListener("click", function () {
+                mobileNav.classList.remove("active");
+                mobileButton.classList.remove("active");
+                mobileButton.setAttribute("aria-expanded", "false");
+              });
+            });
+
+            /* -----------------------------------------------------
+              FECHAR MENU DESKTOP AO CLICAR EM UM LINK
+            ----------------------------------------------------- */
+            const dropdownLinks = dropdown.querySelectorAll("a");
+            dropdownLinks.forEach(function (link) {
+              link.addEventListener("click", function () {
+                dropdown.classList.remove("active");
+              });
+            });
+          
+            /* -----------------------------------------------------
+              MENU SERVIÇO
+            ----------------------------------------------------- */
+            servicoButton.addEventListener("click", function (event) {
+              event.stopPropagation();
+              servicoButton.classList.toggle("active");
+              servicoNav.classList.toggle("active");
+
+              const aberto = servicoNav.classList.contains("active");
+              servicoButton.setAttribute("aria-expanded", aberto);
+            });
+
+            /* -----------------------------------------------------
+              FECHAR AO CLICAR FORA
+            ----------------------------------------------------- */
+            document.addEventListener("click", function (event) {
+              /* Fecha submenu desktop */
+              if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove("active");
+              }
+
+              /* Fecha menu mobile */
+              if (
+                !servicoNav.contains(event.target) &&
+                !servicoButton.contains(event.target)
+              ) {
+                servicoNav.classList.remove("active");
+                servicoButton.classList.remove("active");
+                servicoButton.setAttribute("aria-expanded", "false");
+              }
+            });
+
+            /* -----------------------------------------------------
+              FECHAR MENU SERVIÇO AO CLICAR EM UM LINK
+            ----------------------------------------------------- */
+            const servicoLinks = servicoNav.querySelectorAll("a");
+            servicoLinks.forEach(function (link) {
+              link.addEventListener("click", function () {
+                servicoNav.classList.remove("active");
+                servicoButton.classList.remove("active");
+                servicoButton.setAttribute("aria-expanded", "false");
+              });
+            });
+          });
+        </script>
+        <!--........................-->
       </header>
+      <!--<header class="header-menu">
+        <nav class="desktop-nav">
+          <a href="index.html">Início</a>
+           Menu com opções internas 
+          <div class="nav-dropdown">
+            <button class="dropdown-button" type="button"> Serviços
+              <span class="arrow">⌄</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="eletrica-residencial.html"> - Elétrica Residencial </a>
+              <a href="eletrica-industrial.html"> - Elétrica Industrial </a>
+            </div>
+          </div>
+          <a href="#sobre">Sobre</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </header>-->
+
+
+
 
       <div class="container">
-        <h4>⚠️ Problemas elétricos se agravam rápido.</h4>
+        <h4>Plantão Técnico Emergencial.</h4>
         <div class="dual-section">
           <a href="https://wa.me/5554991878144?text=Olá,+estou+com+um+problema+elétrico+e+preciso+de+ajuda+agora." class="btn-whatsapp">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Atendimento agora.
@@ -663,7 +1163,7 @@
       </div>
 
       <div class="container">
-        <h4>🚀 Aumente o valor do seu imóvel.</h4>
+        <h4>🚀 Aumente o valor do seu patrimônio.</h4>
         <div class="dual-section">
           <a href="tel:+5554991878144" class="btn-ligar">
             <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Feather-communication-phone-call.svg/1920px-Feather-communication-phone-call.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" 
@@ -725,21 +1225,29 @@
               <li>Integração de Sensores e atuadores. </li>
             </ul>
           </div>
-          
         </div>
-      </div>  
+      </div>
 
       <div class="container">
+        <h5>Sobre:</h5>
+        <div calss="sobre" style="font-size: 1.1rem; margin-left: 2rem; margin-bottom: 2rem; margin-right: 4rem;">
+          <b>Atendimento 24 horas em Caxias do Sul.</b><br>
+          <b>Profissional da área da eletricidade que atua em residências,
+          comércios e industrias.</b><br>
+          <b>O melhor investimento para seu patrimônio, garantindo segurança, conforto e qualidade no atendimento.</b><br>
+        </div>
         <div class="dual-section">
           <div class="container2">
-            <h5>👷🏻‍♂️ Características do Profissional</h5>
-            <p>Profissional devidamente qualificado.</p>
-            <p>Mais de 15 anos de experiência.</p>
-            <p>Atendimento em toda Caxias e região.</p>
-            <p>Serviço garantido e seguro.</p>
-            <p>Pagamento via Pix ou Dinheiro logo após finalizar o atendimento.</p>
+            <section id="sobre">
+              <h5>👷🏻‍♂️ Características do Profissional</h5>
+              <p>Profissional devidamente qualificado.</p>
+              <p>Mais de 15 anos de experiência.</p>
+              <p>Atendimento em toda Caxias e região.</p>
+              <p>Serviço garantido, seguro e efetivo.</p>
+              <p>Pagamento via Pix ou Dinheiro logo após finalizar o atendimento.</p>
+            </section>
           </div>
-          
+
           <div class="container2">
             <h5>⏰ Horário e Tempo de Resposta</h5>
             <p>🚗 Atendimento 24 horas por dia, inclusive fins de semana e feriados.</p>
@@ -798,7 +1306,13 @@
 					"imagens/Montagem de estruturas para inversores industriais em Caxias do Sul.jpeg",
 					"imagens/Montagem de barramentos para comandos elétricos em Caxias do Sul.jpg",
 					"imagens/Montagem de estruturas para barramentos elétricos industriais em Caxias do Sul.jpeg",
-					"imagens/Montagem de estruturas para disjuntores industriais em Caxias do Sul.jpeg"
+					"imagens/Montagem de estruturas para disjuntores industriais em Caxias do Sul.jpeg",
+          "avaliacoes/Avaliação 5 estrelas Mauricio.jpg",
+          "avaliacoes/Avaliação 5 estrelas virginia.jpg",
+          "avaliacoes/Avaliação 5 estrelas Cristiane.jpg",
+          "avaliacoes/Avaliação 5 estrelas Lidiane.jpg",
+          "avaliacoes/Avaliação 5 estrelas Simone.jpg",
+          "avaliacoes/Avaliação 5 estrelas Janete.jpg"
         ];
         let currentIndex = 0;
 
