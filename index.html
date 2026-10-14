@@ -555,6 +555,7 @@
 
         @media (max-width: 768px) {
           .header-visual::before {background-size: cover; }
+          .header-menu { height: 0px;}
           .container1 h4 { font-size: 1.1rem; opacity: 1; color: #ffffff; }
           .lightbox img { max-width: 95%; max-height: 70%; }
           .prev, .next, .close-btn { width: 50px; height: 50px; font-size: 2rem; line-height: 50px; }
@@ -921,25 +922,25 @@
         <!--........................-->
         
 
-        <!-- ================================================= BOTÃO MENU MOBILE ================================================= 
+        <!-- ================================================= BOTÃO MENU MOBILE ================================================= -->
         <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Abrir menu" aria-expanded="false"> 
           <span></span> 
           <span></span> 
           <span></span> 
-        </button> -->
-        <!-- ===================================================== MENU MOBILE ===================================================== 
+        </button> 
+        <!-- ===================================================== MENU MOBILE ===================================================== -->
         <nav class="mobile-nav" id="mobileNav"> 
           <a href="index.html">Início</a> 
           <button class="servico-menu-button" id="servicoMenuButton" type="button"  aria-label="Abrir submenu" aria-expanded="false"> Serviços 
             <span class="arrow">⌄</span>
           </button>
           <nav class="servico-nav" id="servicoNav">
-            <a href="eletrica-residencial.html"> - Elétrica Residencial </a> 
-            <a href="eletrica-industrial.html"> - Elétrica Industrial </a> 
+            <a href="paginas/eletrica-residencial.html">🏠 Elétrica Residencial </a>
+            <a href="paginas/eletrica-industrial.html">🏭 Elétrica Industrial </a>
           </nav>
-          <a href="#sobre">Sobre</a>
-          <a href="contato.html">Contato</a>
-        </nav>--> 
+          <a href="paginas/sobre.html">Sobre</a>
+          <!--<a href="contato.html">Contato</a> -->
+        </nav> 
 
         <script>
           document.addEventListener("DOMContentLoaded", function () {
@@ -1062,23 +1063,23 @@
         </script>
         <!--........................-->
       </header>
-      <!--<header class="header-menu">
+      <header class="header-menu">
         <nav class="desktop-nav">
           <a href="index.html">Início</a>
-           Menu com opções internas 
+          <!-- Menu com opções internas -->
           <div class="nav-dropdown">
             <button class="dropdown-button" type="button"> Serviços
               <span class="arrow">⌄</span>
             </button>
             <div class="dropdown-menu">
-              <a href="eletrica-residencial.html"> - Elétrica Residencial </a>
-              <a href="eletrica-industrial.html"> - Elétrica Industrial </a>
+              <a href="paginas/eletrica-residencial.html">🏠 Elétrica Residencial </a>
+              <a href="paginas/eletrica-industrial.html">🏭 Elétrica Industrial </a>
             </div>
           </div>
-          <a href="#sobre">Sobre</a>
-          <a href="contato.html">Contato</a>
+          <a href="paginas/sobre.html">Sobre</a>
+          <!--<a href="contato.html">Contato</a> -->
         </nav>
-      </header>-->
+      </header>
 
 
 
@@ -1098,12 +1099,12 @@
       
       <div class="container">
         <div class="avaliacoes">
-          <img src="avaliacoes/Avaliação 5 estrelas Mauricio.jpg" alt="Avaliação 5 estrelas Mauricio" onclick="openLightbox(24)">
-          <img src="avaliacoes/Avaliação 5 estrelas virginia.jpg" alt="Avaliação 5 estrelas virginia" onclick="openLightbox(25)">
-          <img src="avaliacoes/Avaliação 5 estrelas Cristiane.jpg" alt="Avaliação 5 estrelas Cristiane" onclick="openLightbox(26)">
-          <img src="avaliacoes/Avaliação 5 estrelas Lidiane.jpg" alt="Avaliação 5 estrelas Lidiane" onclick="openLightbox(27)">
-          <img src="avaliacoes/Avaliação 5 estrelas Simone.jpg" alt="Avaliação 5 estrelas Simone" onclick="openLightbox(28)">
-          <img src="avaliacoes/Avaliação 5 estrelas Janete.jpg" alt="Avaliação 5 estrelas Janete" onclick="openLightbox(29)">
+          <img src="avaliacoes/Avaliação 5 estrelas Mauricio.jpg" alt="Avaliação 5 estrelas Mauricio" onclick="openLightbox(26)">
+          <img src="avaliacoes/Avaliação 5 estrelas virginia.jpg" alt="Avaliação 5 estrelas virginia" onclick="openLightbox(27)">
+          <img src="avaliacoes/Avaliação 5 estrelas Cristiane.jpg" alt="Avaliação 5 estrelas Cristiane" onclick="openLightbox(28)">
+          <img src="avaliacoes/Avaliação 5 estrelas Lidiane.jpg" alt="Avaliação 5 estrelas Lidiane" onclick="openLightbox(29)">
+          <img src="avaliacoes/Avaliação 5 estrelas Simone.jpg" alt="Avaliação 5 estrelas Simone" onclick="openLightbox(30)">
+          <img src="avaliacoes/Avaliação 5 estrelas Janete.jpg" alt="Avaliação 5 estrelas Janete" onclick="openLightbox(31)">
         </div>
       </div>
 
@@ -1159,9 +1160,11 @@
           <img src="imagens/Montagem de barramentos para comandos elétricos em Caxias do Sul.jpg" alt="Montagem de barramentos para comandos elétricos em Caxias do Sul" onclick="openLightbox(21)" loading="lazy">
           <img src="imagens/Montagem de estruturas para barramentos elétricos industriais em Caxias do Sul.jpeg" alt="Montagem de estruturas para barramentos elétricos industriais em Caxias do Sul" onclick="openLightbox(22)" loading="lazy">
           <img src="imagens/Montagem de estruturas para disjuntores industriais em Caxias do Sul.jpeg" alt="Montagem de estruturas para disjuntores industriais em Caxias do Sul" onclick="openLightbox(23)" loading="lazy">
+          <img src="imagens/Troca de DR trifásico em Caxias do Sul.jpeg" alt="Troca de DR trifásico em Caxias do Sul" onclick="openLightbox(24)" loading="lazy"><!-- modificado-->
+          <img src="imagens/Troca de DR bipolar em Caxias do Sul.jpeg" alt="Troca de DR bipolar em Caxias do Sul" onclick="openLightbox(25)" loading="lazy"><!-- modificado-->
         </div>
       </div>
-
+<!-- Transferido
       <div class="container">
         <h4>🚀 Aumente o valor do seu patrimônio.</h4>
         <div class="dual-section">
@@ -1230,7 +1233,7 @@
 
       <div class="container">
         <h5>Sobre:</h5>
-        <div calss="sobre" style="font-size: 1.1rem; margin-left: 2rem; margin-bottom: 2rem; margin-right: 4rem;">
+        <div class="sobre" style="font-size: 1.1rem; margin-left: 2rem; margin-bottom: 2rem; margin-right: 4rem;">
           <b>Atendimento 24 horas em Caxias do Sul.</b><br>
           <b>Profissional da área da eletricidade que atua em residências,
           comércios e industrias.</b><br>
@@ -1255,7 +1258,7 @@
           </div>
         </div>
       </div>
-
+-->
       <!-- Lightbox -->
       <div class="lightbox" id="lightbox" onclick="if(event.target === this) closeLightbox();">
         <button class="prev" onclick="changeImage(-1)">‹</button>
@@ -1307,6 +1310,8 @@
 					"imagens/Montagem de barramentos para comandos elétricos em Caxias do Sul.jpg",
 					"imagens/Montagem de estruturas para barramentos elétricos industriais em Caxias do Sul.jpeg",
 					"imagens/Montagem de estruturas para disjuntores industriais em Caxias do Sul.jpeg",
+          "imagens/Troca de DR trifásico em Caxias do Sul.jpeg",
+          "imagens/Troca de DR bipolar em Caxias do Sul.jpeg",
           "avaliacoes/Avaliação 5 estrelas Mauricio.jpg",
           "avaliacoes/Avaliação 5 estrelas virginia.jpg",
           "avaliacoes/Avaliação 5 estrelas Cristiane.jpg",
